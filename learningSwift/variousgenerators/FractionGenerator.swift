@@ -192,29 +192,38 @@ class FractionGenerator {
                 values.shuffle()
                 
                 // Create fractions with these values
-                for value in values {
+                // Ensure the FIRST numerator term is POSITIVE to avoid cases like -84/12 - 320/8
+                // For remaining terms, allow random ±, but guarantee at least one negative if there are 2+ terms
+                var generated: [Fraction] = []
+                var hasNegative = false
+                for (idx, value) in values.enumerated() {
                     if value == 0 {
                         let denominator = Int.random(in: denominatorRange.0...denominatorRange.1)
-                        uppers.append(Fraction(numerator: 0, denominator: denominator, sign: 1))
+                        generated.append(Fraction(numerator: 0, denominator: denominator, sign: 1))
+                        continue
+                    }
+                    let denominator = Int.random(in: denominatorRange.0...denominatorRange.1)
+                    let chosenSign: Int
+                    if idx == 0 {
+                        chosenSign = 1
                     } else {
-                        let denominator = Int.random(in: denominatorRange.0...denominatorRange.1)
-                        let sign = Bool.random() ? 1 : -1
-                        
-                        if sign == -1 && values.count > 1 {
-                            if let idx = values.firstIndex(of: value) {
-                                for i in 0..<values.count {
-                                    if i != idx {
-                                        values[i] += 2 * value
-                                        break
-                                    }
-                                }
-                            }
+                        chosenSign = (Bool.random() ? 1 : -1)
+                        if chosenSign == -1 { hasNegative = true }
+                    }
+                    let numerator = value * denominator
+                    generated.append(Fraction(numerator: numerator, denominator: denominator, sign: chosenSign))
+                }
+                // If we never picked a negative and we have 2+ terms, flip the sign of the last non-zero term
+                if !hasNegative, generated.count > 1 {
+                    for i in stride(from: generated.count - 1, through: 1, by: -1) {
+                        if generated[i].numerator != 0 {
+                            generated[i].sign = -1
+                            hasNegative = true
+                            break
                         }
-                        
-                        let numerator = value * denominator
-                        uppers.append(Fraction(numerator: numerator, denominator: denominator, sign: sign))
                     }
                 }
+                uppers.append(contentsOf: generated)
             }
             
             // Generate the denominator fractions (lowers)
@@ -261,14 +270,17 @@ class FractionGenerator {
             }
             
             print("normal method 11")
-       
-            
-            print("int:", decimalResult)
-            print(simplifiedNum)
-            print(simplifiedDen)
-            print(sign)
-            print("Fraction string:", fractionString)
-            return (uppers, lowers, Double(simplifiedNum), fractionString)
+            // Recompute the actual value and fraction string based on the generated expression,
+            // so LaTeX and numeric answer always match
+            if let computed = calculateFinalFraction(uppers: uppers, lowers: lowers) {
+                print("computed value:", computed.value)
+                print("computed fraction:", computed.fractionString)
+                return (uppers, lowers, computed.value, computed.fractionString)
+            } else {
+                // Fallback to target fraction if computation unexpectedly fails
+                print("fallback to target fraction")
+                return (uppers, lowers, decimalResult, fractionString)
+            }
         }
     }
     

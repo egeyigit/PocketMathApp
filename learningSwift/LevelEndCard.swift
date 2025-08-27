@@ -8,80 +8,101 @@
 import Foundation
 import SwiftUI
 
-struct LevelEndCardold: View {
+struct LevelEndCard: View {
     @Binding var score: Int
     @Binding var showCard: Bool
+    @Binding var viewID: UUID
+    var onPlayAgain: () -> Void
+    
+    @State private var navigateToMenu: Bool = false
+    
+    var gameType: GameType
+    var difficulty: Int
+    var timeElapsed: Int
     
     var body: some View {
         GeometryReader { geometry in
-            VStack {
-                Text("Results")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .padding()
-                    .frame(maxHeight: .infinity)
-
+            ZStack {
+                // Overlay that covers the entire screen
+                Color.black.opacity(0.4)
+                    .edgesIgnoringSafeArea(.all)
+                    .opacity(showCard ? 1 : 0)
                 
-                Text("Your score: \(score)")
-                    .font(.title)
-                    .padding()
-                    .frame(maxHeight: .infinity)
-
-                
-                GeometryReader { geometry2 in
+                VStack(spacing: 0) {
+                    // Top section with title and score
                     VStack {
-                        Spacer() // This pushes the buttons to the bottom of the screen
+                        Text("Results")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .padding()
                         
-                        HStack {
-                            Button(action: {
-                                // Close the card
-                                withAnimation {
-                                    showCard = false
-                                }
-                            }) {
-                                Text("Menu")
-                                    .font(.title2)
-                                    
-                                    .background(Color.green)
-                                    .foregroundColor(.white)
-                                    .cornerRadius(10)
-                                    .frame(width: .infinity) // Half width and height
-                            }
-                            .padding(.top)
-                            
-                            Button(action: {
-                                // Close the card
-                                withAnimation {
-                                    showCard = false
-                                }
-                            }) {
-                                Label("", systemImage: "repeat")
-                                    .font(.system(size: 30, weight: .bold)) // Makes the arrow thicker
-                                    .foregroundColor(.white) // Makes the arrow white
-                                     // Adds padding to increase button size
-                                    .background(Color.blue) // Change button background color
-                                    .cornerRadius(10)
-                                    .shadow(color: .gray.opacity(0.6), radius: 10, x: 5, y: 5)
-                                    .frame(width: .infinity) // Half width and height
-                            }
-                            .padding(.top)
-                        }
-                        .frame(maxWidth: .infinity) // Ensure the HStack fills the width of the parent container
-                        .padding(.bottom, geometry2.size.height * 0.05) // Optional, gives some space from the bottom
-                        
+                        Text("Your score: \(score)")
+                            .font(.title)
+                            .padding(.bottom)
                     }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity) // Ensures the VStack takes up all available space
+                    .frame(maxWidth: .infinity)
+                    .background(Color.white)
+                    .cornerRadius(20, corners: [.topLeft, .topRight])
+                    
+                    // Bottom section with buttons
+                    VStack(spacing: 0) {
+                        // Menu button - takes up the full width
+                        Button(action: {
+                            showCard = false
+                            navigateToMenu = true
+                        }) {
+                            Text("Menu")
+                                .font(.title2)
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .frame(maxWidth: .infinity, minHeight: 60)
+                                .background(Color.green)
+                        }
+                        
+                        // Play Again button - takes up the full width
+                        Button(action: {
+                            onPlayAgain()
+                            withAnimation {
+                                showCard = false
+                            }
+                        }) {
+                            HStack {
+                                Image(systemName: "repeat")
+                                Text("Play Again")
+                            }
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity, minHeight: 60)
+                            .background(Color.blue)
+                        }
+                    }
+                    .frame(maxWidth: .infinity)
+                    .cornerRadius(20, corners: [.bottomLeft, .bottomRight])
                 }
+                .frame(width: geometry.size.width * 0.9, height: geometry.size.height * 0.4)
+                .shadow(radius: 10)
+                .opacity(showCard ? 1 : 0)
+                .animation(.easeInOut, value: showCard)
             }
-            .frame(maxWidth: .infinity, maxHeight: geometry.size.height * 0.4)
-            .background(Color.white)
-            .cornerRadius(20)
-            .shadow(radius: 10)
-            .padding(.horizontal)
-            .padding(.top, 200)// Position card from top
-            .opacity(showCard ? 1 : 0)  // Make the card invisible when showCard is false
-            .animation(.easeInOut, value: showCard) // Smooth transition when visibility changes
+            
+            // Modern navigation handling (replacing the deprecated method)
+            .navigationDestination(isPresented: $navigateToMenu) {
+                MenuView()
+            }
         }
         .edgesIgnoringSafeArea(.all)
+        .onAppear {
+            // Save the attempt when the card appears
+            GameDatabase.shared.saveAttempt(
+                gameType: gameType,
+                difficulty: difficulty,
+                score: score,
+                time: timeElapsed
+            )
+        }
     }
 }
+
+// Extension to allow for specific corner rounding
+
