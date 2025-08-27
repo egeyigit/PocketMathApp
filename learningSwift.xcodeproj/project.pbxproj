@@ -6,6 +6,25 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CC1202492D6BB78C0011A118 /* MathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1202482D6BB7880011A118 /* MathView.swift */; };
+		CC4710812D74DDE900F773CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4710802D74DDE100F773CB /* Extensions.swift */; };
+		CC4710AA2D764AFC00F773CB /* MathKeyboardEngine in Frameworks */ = {isa = PBXBuildFile; productRef = CC4710A92D764AFC00F773CB /* MathKeyboardEngine */; };
+		CC7620D22D6C2E07007BCD81 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = CC7620D12D6C2E07007BCD81 /* SwiftMath */; };
+		CC7620D42D6C2E0C007BCD81 /* LaTeXSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CC7620D32D6C2E0C007BCD81 /* LaTeXSwiftUI */; };
+		CCEA3B182E5F3AA200FCEF87 /* FirebaseAI in Frameworks */ = {isa = PBXBuildFile; productRef = CCEA3B172E5F3AA200FCEF87 /* FirebaseAI */; };
+		CCEA3B1A2E5F3AA200FCEF87 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CCEA3B192E5F3AA200FCEF87 /* FirebaseAnalytics */; };
+		CCEA3B1C2E5F3AA200FCEF87 /* FirebaseAnalyticsCore in Frameworks */ = {isa = PBXBuildFile; productRef = CCEA3B1B2E5F3AA200FCEF87 /* FirebaseAnalyticsCore */; };
+		CCEA3B202E5F3AA200FCEF87 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = CCEA3B1F2E5F3AA200FCEF87 /* FirebaseAppCheck */; };
+		CCEA3B222E5F3AA200FCEF87 /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = CCEA3B212E5F3AA200FCEF87 /* FirebaseAppDistribution-Beta */; };
+		CCEA3B242E5F3AA200FCEF87 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CCEA3B232E5F3AA200FCEF87 /* FirebaseAuth */; };
+		CCEA3B262E5F3AA200FCEF87 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CCEA3B252E5F3AA200FCEF87 /* FirebaseAuthCombine-Community */; };
+		CCEA3B282E5F3AA200FCEF87 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = CCEA3B272E5F3AA200FCEF87 /* FirebaseCore */; };
+		CCEA3B2A2E5F3AA200FCEF87 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = CCEA3B292E5F3AA200FCEF87 /* FirebaseCrashlytics */; };
+		CCEA3B2C2E5F3AA200FCEF87 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = CCEA3B2B2E5F3AA200FCEF87 /* FirebaseDatabase */; };
+		CCEA3B2E2E5F3AA200FCEF87 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CCEA3B2D2E5F3AA200FCEF87 /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		CC12022B2D6BB2C20011A118 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,11 +46,26 @@
 		CC1202182D6BB2C10011A118 /* learningSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = learningSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC12022A2D6BB2C20011A118 /* learningSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = learningSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1202342D6BB2C20011A118 /* learningSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = learningSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC1202482D6BB7880011A118 /* MathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathView.swift; sourceTree = "<group>"; };
+		CC4710802D74DDE100F773CB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		CC3A48D42D9B362000B3319F /* Exceptions for "learningSwift" folder in "learningSwift" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = CC1202172D6BB2C10011A118 /* learningSwift */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		CC12021A2D6BB2C10011A118 /* learningSwift */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				CC3A48D42D9B362000B3319F /* Exceptions for "learningSwift" folder in "learningSwift" target */,
+			);
 			path = learningSwift;
 			sourceTree = "<group>";
 		};
@@ -52,6 +86,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCEA3B202E5F3AA200FCEF87 /* FirebaseAppCheck in Frameworks */,
+				CCEA3B242E5F3AA200FCEF87 /* FirebaseAuth in Frameworks */,
+				CC7620D22D6C2E07007BCD81 /* SwiftMath in Frameworks */,
+				CCEA3B1C2E5F3AA200FCEF87 /* FirebaseAnalyticsCore in Frameworks */,
+				CCEA3B182E5F3AA200FCEF87 /* FirebaseAI in Frameworks */,
+				CCEA3B262E5F3AA200FCEF87 /* FirebaseAuthCombine-Community in Frameworks */,
+				CC4710AA2D764AFC00F773CB /* MathKeyboardEngine in Frameworks */,
+				CCEA3B2E2E5F3AA200FCEF87 /* FirebaseFirestore in Frameworks */,
+				CCEA3B1A2E5F3AA200FCEF87 /* FirebaseAnalytics in Frameworks */,
+				CCEA3B2A2E5F3AA200FCEF87 /* FirebaseCrashlytics in Frameworks */,
+				CC7620D42D6C2E0C007BCD81 /* LaTeXSwiftUI in Frameworks */,
+				CCEA3B282E5F3AA200FCEF87 /* FirebaseCore in Frameworks */,
+				CCEA3B2C2E5F3AA200FCEF87 /* FirebaseDatabase in Frameworks */,
+				CCEA3B222E5F3AA200FCEF87 /* FirebaseAppDistribution-Beta in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +127,9 @@
 				CC12022D2D6BB2C20011A118 /* learningSwiftTests */,
 				CC1202372D6BB2C20011A118 /* learningSwiftUITests */,
 				CC1202192D6BB2C10011A118 /* Products */,
+				CC1202482D6BB7880011A118 /* MathView.swift */,
+				CC7620D02D6C2E07007BCD81 /* Frameworks */,
+				CC4710802D74DDE100F773CB /* Extensions.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +141,13 @@
 				CC1202342D6BB2C20011A118 /* learningSwiftUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CC7620D02D6C2E07007BCD81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,12 +164,33 @@
 			buildRules = (
 			);
 			dependencies = (
+				CCEA3B302E5F3E1400FCEF87 /* PBXTargetDependency */,
+				CCEA3B322E5F3E1400FCEF87 /* PBXTargetDependency */,
+				CCEA3B342E5F3E1400FCEF87 /* PBXTargetDependency */,
+				CCEA3B362E5F3E1400FCEF87 /* PBXTargetDependency */,
+				CC4710A82D764AF200F773CB /* PBXTargetDependency */,
+				CC1202642D6BCB120011A118 /* PBXTargetDependency */,
+				CC1202622D6BC9F90011A118 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				CC12021A2D6BB2C10011A118 /* learningSwift */,
 			);
 			name = learningSwift;
 			packageProductDependencies = (
+				CC7620D12D6C2E07007BCD81 /* SwiftMath */,
+				CC7620D32D6C2E0C007BCD81 /* LaTeXSwiftUI */,
+				CC4710A92D764AFC00F773CB /* MathKeyboardEngine */,
+				CCEA3B172E5F3AA200FCEF87 /* FirebaseAI */,
+				CCEA3B192E5F3AA200FCEF87 /* FirebaseAnalytics */,
+				CCEA3B1B2E5F3AA200FCEF87 /* FirebaseAnalyticsCore */,
+				CCEA3B1F2E5F3AA200FCEF87 /* FirebaseAppCheck */,
+				CCEA3B212E5F3AA200FCEF87 /* FirebaseAppDistribution-Beta */,
+				CCEA3B232E5F3AA200FCEF87 /* FirebaseAuth */,
+				CCEA3B252E5F3AA200FCEF87 /* FirebaseAuthCombine-Community */,
+				CCEA3B272E5F3AA200FCEF87 /* FirebaseCore */,
+				CCEA3B292E5F3AA200FCEF87 /* FirebaseCrashlytics */,
+				CCEA3B2B2E5F3AA200FCEF87 /* FirebaseDatabase */,
+				CCEA3B2D2E5F3AA200FCEF87 /* FirebaseFirestore */,
 			);
 			productName = learningSwift;
 			productReference = CC1202182D6BB2C10011A118 /* learningSwift.app */;
@@ -195,6 +274,12 @@
 			);
 			mainGroup = CC12020F2D6BB2C10011A118;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				CC1202472D6BB6B90011A118 /* XCRemoteSwiftPackageReference "SwiftMath" */,
+				CC1202602D6BC7EE0011A118 /* XCRemoteSwiftPackageReference "LaTeXSwiftUI" */,
+				CC4710A62D764ABE00F773CB /* XCRemoteSwiftPackageReference "MathKeyboardEngine" */,
+				CCEA3AE02E5F366B00FCEF87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CC1202192D6BB2C10011A118 /* Products */;
 			projectDirPath = "";
@@ -236,6 +321,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC1202492D6BB78C0011A118 /* MathView.swift in Sources */,
+				CC4710812D74DDE900F773CB /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +352,34 @@
 			isa = PBXTargetDependency;
 			target = CC1202172D6BB2C10011A118 /* learningSwift */;
 			targetProxy = CC1202352D6BB2C20011A118 /* PBXContainerItemProxy */;
+		};
+		CC1202622D6BC9F90011A118 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = CC1202612D6BC9F90011A118 /* LaTeXSwiftUI */;
+		};
+		CC1202642D6BCB120011A118 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = CC1202632D6BCB120011A118 /* SwiftMath */;
+		};
+		CC4710A82D764AF200F773CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = CC4710A72D764AF200F773CB /* MathKeyboardEngine */;
+		};
+		CCEA3B302E5F3E1400FCEF87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = CCEA3B2F2E5F3E1400FCEF87 /* FirebaseCore */;
+		};
+		CCEA3B322E5F3E1400FCEF87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = CCEA3B312E5F3E1400FCEF87 /* FirebaseCrashlytics */;
+		};
+		CCEA3B342E5F3E1400FCEF87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = CCEA3B332E5F3E1400FCEF87 /* FirebaseDatabase */;
+		};
+		CCEA3B362E5F3E1400FCEF87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = CCEA3B352E5F3E1400FCEF87 /* FirebaseFirestore */;
 		};
 /* End PBXTargetDependency section */
 
@@ -393,27 +508,34 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"learningSwift/Preview Content\"";
 				DEVELOPMENT_TEAM = XZ5JXFXFC9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = learningSwift/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TimedMath;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ex.hey.learningSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -422,27 +544,34 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"learningSwift/Preview Content\"";
 				DEVELOPMENT_TEAM = XZ5JXFXFC9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = learningSwift/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TimedMath;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ex.hey.learningSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -558,6 +687,149 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CC1202472D6BB6B90011A118 /* XCRemoteSwiftPackageReference "SwiftMath" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mgriebling/SwiftMath";
+			requirement = {
+				kind = exactVersion;
+				version = 1.7.1;
+			};
+		};
+		CC1202602D6BC7EE0011A118 /* XCRemoteSwiftPackageReference "LaTeXSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/colinc86/LaTeXSwiftUI";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		CC4710A62D764ABE00F773CB /* XCRemoteSwiftPackageReference "MathKeyboardEngine" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MathKeyboardEngine/MathKeyboardEngine.Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		CCEA3AE02E5F366B00FCEF87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CC1202612D6BC9F90011A118 /* LaTeXSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC1202602D6BC7EE0011A118 /* XCRemoteSwiftPackageReference "LaTeXSwiftUI" */;
+			productName = LaTeXSwiftUI;
+		};
+		CC1202632D6BCB120011A118 /* SwiftMath */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC1202472D6BB6B90011A118 /* XCRemoteSwiftPackageReference "SwiftMath" */;
+			productName = SwiftMath;
+		};
+		CC4710A72D764AF200F773CB /* MathKeyboardEngine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC4710A62D764ABE00F773CB /* XCRemoteSwiftPackageReference "MathKeyboardEngine" */;
+			productName = MathKeyboardEngine;
+		};
+		CC4710A92D764AFC00F773CB /* MathKeyboardEngine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC4710A62D764ABE00F773CB /* XCRemoteSwiftPackageReference "MathKeyboardEngine" */;
+			productName = MathKeyboardEngine;
+		};
+		CC7620D12D6C2E07007BCD81 /* SwiftMath */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC1202472D6BB6B90011A118 /* XCRemoteSwiftPackageReference "SwiftMath" */;
+			productName = SwiftMath;
+		};
+		CC7620D32D6C2E0C007BCD81 /* LaTeXSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC1202602D6BC7EE0011A118 /* XCRemoteSwiftPackageReference "LaTeXSwiftUI" */;
+			productName = LaTeXSwiftUI;
+		};
+		CCEA3B172E5F3AA200FCEF87 /* FirebaseAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCEA3AE02E5F366B00FCEF87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAI;
+		};
+		CCEA3B192E5F3AA200FCEF87 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCEA3AE02E5F366B00FCEF87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		CCEA3B1B2E5F3AA200FCEF87 /* FirebaseAnalyticsCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCEA3AE02E5F366B00FCEF87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsCore;
+		};
+		CCEA3B1F2E5F3AA200FCEF87 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCEA3AE02E5F366B00FCEF87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		CCEA3B212E5F3AA200FCEF87 /* FirebaseAppDistribution-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCEA3AE02E5F366B00FCEF87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAppDistribution-Beta";
+		};
+		CCEA3B232E5F3AA200FCEF87 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCEA3AE02E5F366B00FCEF87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		CCEA3B252E5F3AA200FCEF87 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCEA3AE02E5F366B00FCEF87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		CCEA3B272E5F3AA200FCEF87 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCEA3AE02E5F366B00FCEF87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		CCEA3B292E5F3AA200FCEF87 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCEA3AE02E5F366B00FCEF87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		CCEA3B2B2E5F3AA200FCEF87 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCEA3AE02E5F366B00FCEF87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		CCEA3B2D2E5F3AA200FCEF87 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCEA3AE02E5F366B00FCEF87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		CCEA3B2F2E5F3E1400FCEF87 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCEA3AE02E5F366B00FCEF87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		CCEA3B312E5F3E1400FCEF87 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCEA3AE02E5F366B00FCEF87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		CCEA3B332E5F3E1400FCEF87 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCEA3AE02E5F366B00FCEF87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		CCEA3B352E5F3E1400FCEF87 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCEA3AE02E5F366B00FCEF87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CC1202102D6BB2C10011A118 /* Project object */;
 }
