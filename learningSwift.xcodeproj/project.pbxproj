@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6810F722E5F486F001C18A7 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = C6810F712E5F486F001C18A7 /* FirebaseCore */; };
 		CC1202492D6BB78C0011A118 /* MathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1202482D6BB7880011A118 /* MathView.swift */; };
 		CC4710812D74DDE900F773CB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4710802D74DDE100F773CB /* Extensions.swift */; };
-		CC4710AA2D764AFC00F773CB /* MathKeyboardEngine in Frameworks */ = {isa = PBXBuildFile; productRef = CC4710A92D764AFC00F773CB /* MathKeyboardEngine */; };
 		CC7620D22D6C2E07007BCD81 /* SwiftMath in Frameworks */ = {isa = PBXBuildFile; productRef = CC7620D12D6C2E07007BCD81 /* SwiftMath */; };
 		CC7620D42D6C2E0C007BCD81 /* LaTeXSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = CC7620D32D6C2E0C007BCD81 /* LaTeXSwiftUI */; };
 /* End PBXBuildFile section */
@@ -76,7 +76,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC7620D22D6C2E07007BCD81 /* SwiftMath in Frameworks */,
-				CC4710AA2D764AFC00F773CB /* MathKeyboardEngine in Frameworks */,
+				C6810F722E5F486F001C18A7 /* FirebaseCore in Frameworks */,
 				CC7620D42D6C2E0C007BCD81 /* LaTeXSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,7 +153,7 @@
 			packageProductDependencies = (
 				CC7620D12D6C2E07007BCD81 /* SwiftMath */,
 				CC7620D32D6C2E0C007BCD81 /* LaTeXSwiftUI */,
-				CC4710A92D764AFC00F773CB /* MathKeyboardEngine */,
+				C6810F712E5F486F001C18A7 /* FirebaseCore */,
 			);
 			productName = learningSwift;
 			productReference = CC1202182D6BB2C10011A118 /* learningSwift.app */;
@@ -242,6 +242,7 @@
 				CC1202602D6BC7EE0011A118 /* XCRemoteSwiftPackageReference "LaTeXSwiftUI" */,
 				CC4710A62D764ABE00F773CB /* XCRemoteSwiftPackageReference "MathKeyboardEngine" */,
 				CCEA3AE02E5F366B00FCEF87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				C6810F702E5F4770001C18A7 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CC1202192D6BB2C10011A118 /* Products */;
@@ -636,6 +637,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C6810F702E5F4770001C18A7 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.1;
+			};
+		};
 		CC1202472D6BB6B90011A118 /* XCRemoteSwiftPackageReference "SwiftMath" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mgriebling/SwiftMath";
@@ -671,6 +680,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C6810F712E5F486F001C18A7 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCEA3AE02E5F366B00FCEF87 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
 		CC1202612D6BC9F90011A118 /* LaTeXSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CC1202602D6BC7EE0011A118 /* XCRemoteSwiftPackageReference "LaTeXSwiftUI" */;
@@ -682,11 +696,6 @@
 			productName = SwiftMath;
 		};
 		CC4710A72D764AF200F773CB /* MathKeyboardEngine */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CC4710A62D764ABE00F773CB /* XCRemoteSwiftPackageReference "MathKeyboardEngine" */;
-			productName = MathKeyboardEngine;
-		};
-		CC4710A92D764AFC00F773CB /* MathKeyboardEngine */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CC4710A62D764ABE00F773CB /* XCRemoteSwiftPackageReference "MathKeyboardEngine" */;
 			productName = MathKeyboardEngine;
