@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1024 1024">
+  <!-- Generator: Adobe Illustrator 29.3.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 151)  -->
+  <defs>
+    <style>
+      .st0 {
+        stroke: url(#linear-gradient5);
+      }
+
+      .st0, .st1, .st2 {
+        fill: aqua;
+      }
+
+      .st0, .st1, .st2, .st3, .st4, .st5, .st6, .st7, .st8 {
+        stroke-miterlimit: 10;
+      }
+
+      .st0, .st1, .st2, .st5 {
+        stroke-width: 100px;
+      }
+
+      .st0, .st1, .st2, .st5, .st8 {
+        stroke-linecap: round;
+      }
+
+      .st1 {
+        stroke: url(#linear-gradient3);
+      }
+
+      .st2 {
+        stroke: url(#linear-gradient6);
+      }
+
+      .st3 {
+        stroke: url(#linear-gradient1);
+      }
+
+      .st3, .st4, .st6 {
+        fill: none;
+        stroke-width: 20px;
+      }
+
+      .st4 {
+        stroke: url(#linear-gradient4);
+      }
+
+      .st5 {
+        stroke: url(#linear-gradient2);
+      }
+
+      .st6, .st7, .st8 {
+        stroke: #000;
+      }
+
+      .st8 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="859.07" y1="849.38" x2="115.53" y2="135.75" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".1" stop-color="#b6b6b6"/>
+      <stop offset=".23" stop-color="#878787"/>
+      <stop offset=".41" stop-color="#565656"/>
+      <stop offset=".66" stop-color="#252525"/>
+      <stop offset=".88" stop-color="#000"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient1" x1="151.17" y1="739.27" x2="531.35" y2="739.27" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#000"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient2" x1="520.21" y1="81.12" x2="520.21" y2="957.45" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="aqua"/>
+      <stop offset="1" stop-color="#000"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient3" x1="82.98" y1="519.28" x2="957.45" y2="519.28" xlink:href="#linear-gradient2"/>
+    <linearGradient id="linear-gradient4" x1="566.84" y1="301.42" x2="909.97" y2="301.42" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#000"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient5" x1="733.4" y1="270.53" x2="733.4" y2="270.53" xlink:href="#linear-gradient2"/>
+    <linearGradient id="linear-gradient6" x1="399.16" y1="757.28" x2="399.16" y2="757.28" xlink:href="#linear-gradient2"/>
+  </defs>
+  <path class="st7" d="M399.16,211.74"/>
+  <rect class="st8" x="-3.94" width="1048.31" height="1048.31"/>
+  <path class="st3" d="M531.35,917.6c-204.44,0-370.18-164.16-370.18-366.67"/>
+  <line class="st5" x1="520.21" y1="131.12" x2="520.21" y2="907.45"/>
+  <line class="st1" x1="132.98" y1="519.28" x2="907.45" y2="519.28"/>
+  <path class="st6" d="M520.21,757.28"/>
+  <path class="st6" d="M751.99,519.28"/>
+  <path class="st4" d="M566.84,125.2c183.98,0,333.13,162.27,333.13,362.44"/>
+  <path class="st0" d="M733.4,270.53"/>
+  <path class="st2" d="M399.16,757.28"/>
+  <polygon points="733.4 226.11 540.54 538.7 499.88 509.61 733.4 226.11 733.4 226.11"/>
+  <polygon points="297.83 652.84 518.44 490.59 544.26 533.41 297.83 652.84 297.83 652.84"/>
+</svg>
